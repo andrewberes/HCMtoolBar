@@ -1,0 +1,19 @@
+{
+"extensions":
+    [
+        {
+        "builtin": "True",
+        "enable": "True",
+        "type": "extension",
+        "rocket_mode_compatible": "True",
+        "name": "HCMtoolBox",
+        "description": "HCM tools for pyRevit",
+        "author": "Andrew Beres - Automation Group",
+        "author-url": "https://www.linkedin.com/in/andrew-beres-b67b1a144/",
+        "url": "https://aberes@bitbucket.org/aberes/hcmtoolbox.git",
+        "website": "http://www.hcm2.com/",
+        "image" : "",
+        "dependencies": []
+        }     
+    ]
+}
