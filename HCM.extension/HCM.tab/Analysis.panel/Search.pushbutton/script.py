@@ -160,7 +160,7 @@ matched_cmdname, switches = \
                                       NP_SWITCH,
                                       CONFIG_SWITCH,
                                       ALT_FLAG],
-                            search_tip='pyRevit Search')
+                            search_tip='pyHCM Search')
 
 # if asking for help show help and exit
 if switches[HELP_SWITCH] and not matched_cmdname:

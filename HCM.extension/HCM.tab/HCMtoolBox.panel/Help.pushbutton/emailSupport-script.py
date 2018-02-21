@@ -6,6 +6,6 @@ __title__ = 'HCM BIM\nSupport'
 
 
 import os
-os.startfile('I:\Revit AddIn\3.1_Revit Help Ticket\getHelp.msg')
+os.startfile('L:\Dynamo\zzz.DoNotModify\CustomExtensions\getHelp.msg')
 
 

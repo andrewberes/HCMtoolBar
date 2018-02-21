@@ -4,13 +4,13 @@
 __title__ = 'Info'
 
 print('Welcome to the HCM toolBox.')
-print('\n')* 3
-print('This toolBox is under development by the automationGroup, a sub-committee of Design Technology at Hord Coplan Macht')
-print('The purpose of these tools is to automate typical company specific work-flows.')
-print('\n')* 3
-print('For specific automation tasks please reach out to Jordan or myself(Andrew) using the "Support" button')
-print('General Questions/Comments/Concerns are also expected!')
-print('\n')* 3
-print('The purpose of this is to help you work faster, and more efficent')
-print('by leveraging the full potential of Building INFORMATION Models.')
+print('\n')* 2
+print('Developed by the Automation Group at HCM.')
+print('\n')*2
+print('This effort reflects our desire to streamline workflows and generate in house solutions to technological bottle necks.')
+print('\n')*2
+print('As a task force within the Design Technology Committee, the Automation Group leverages comutational logics to solve Architectural problems')
+print('\n')* 2
+print('The purpose of this set of tools is to help EVERYONE document faster, and more efficently - ')
+print('ultimatly, leaving more time for GREAT DESIGN.')
 

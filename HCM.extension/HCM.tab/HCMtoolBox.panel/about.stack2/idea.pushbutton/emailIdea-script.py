@@ -6,6 +6,6 @@ __title__ = 'Idea'
 
 
 import os
-os.startfile('I:\Revit AddIn\3.2_Submit Idea\idea.msg')
+os.startfile('L:\Dynamo\zzz.DoNotModify\CustomExtensions\getHelp.msg')
 
 
