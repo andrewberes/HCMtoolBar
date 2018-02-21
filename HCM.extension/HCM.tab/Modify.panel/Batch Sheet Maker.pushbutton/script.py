@@ -11,6 +11,8 @@ __helpurl__ = "https://www.youtube.com/watch?v=SJzs9ZxqRYc"
 __doc__ = 'Enter sheet names and numbers in the text box and '\
           'this tool will create all at once.'
 
+__title__ = 'Batch\nSheet Maker'
+
 
 logger = script.get_logger()
 
