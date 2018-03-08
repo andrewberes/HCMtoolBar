@@ -62,11 +62,11 @@ with revit.Transaction("Set Detail Number"):
 			dumbDetailNumber = detailNumber + 'dup'
 			detailNumberParam.Set(dumbDetailNumber)
 			detailNumberParam = vport.get_Parameter(builtInParam)
-			vportMinimumPoint = vport.GetBoxOutline().MinimumPoint
-			vportMinX = vportMinimumPoint.X - leftMargin
-			locationX = math.floor((vportMinX) / divisorX)
-			vportMinY = vportMinimumPoint.Y - verticalMargin
-			locationY = (rows - math.floor((vportMinY) / divisorY))
+			titleMinimumPoint = vport.GetLabelOutline().MinimumPoint
+			titleMinX = titleMinimumPoint.X - leftMargin
+			locationX = math.floor((titleMinX) / divisorX)
+			titleMinY = titleMinimumPoint.Y - verticalMargin
+			locationY = (rows - math.floor((titleMinY) / divisorY))
 			newDetailNumber = str(int(locationY)) + columnLetters[int(locationX)]
 			detailNumberParam.Set(newDetailNumber)
 
