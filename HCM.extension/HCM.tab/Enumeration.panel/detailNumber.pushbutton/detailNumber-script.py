@@ -33,7 +33,7 @@ newDetailNumber = []
 vportOnSheet = []
 locationX = []
 locationY = []
-columnLetters = ('A','B','C','D','E','F','G','H','J','K','L','M')
+columnLetters = ('A','B','C','D','E','F','G','H','J','K','L','M',"A")
 
 
 
