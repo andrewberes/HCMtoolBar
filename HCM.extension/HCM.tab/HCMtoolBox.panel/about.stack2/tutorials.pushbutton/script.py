@@ -1,7 +1,6 @@
 """Opens the HCM intranet home page."""
 
 __context__ = 'zerodoc'
-
 __title__ = 'Videos'
 
 

@@ -2,6 +2,7 @@
 """
 
 __title__ = 'Info'
+__context__ = 'zerodoc'
 
 print('Welcome to the HCM toolBox.')
 print('\n')* 2
