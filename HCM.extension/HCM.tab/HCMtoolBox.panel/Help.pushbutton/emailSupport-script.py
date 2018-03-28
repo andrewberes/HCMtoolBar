@@ -7,6 +7,6 @@ __context__ = 'zerodoc'
 
 
 import os
-os.startfile('L:\Dynamo\zzz.DoNotModify\supportTicket.msg')
+os.startfile('L:\Dynamo\zzz.DoNotModify\supportTicket.msg - Shortcut')
 
 
