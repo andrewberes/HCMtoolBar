@@ -8,14 +8,14 @@ import pyrevit
 import os
 import datetime
 
-__title__ = 'Duplicate Selected\nLegends As Detail Views'
+__title__ = 'Duplicate Selected\nLegends As Drafting Views'
 
 #buttom Tracker
 now = datetime.datetime.now()
 date = now.strftime("%Y-%m-%d")
 hostapp = pyrevit._HostApplication(__revit__)
 userName = hostapp.username
-buttonCode = 'Legends to Details'
+buttonCode = 'Legends to Drafting'
 logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
 os.chdir(logFilePath)
 f = open(userName + ".txt", "a+")
