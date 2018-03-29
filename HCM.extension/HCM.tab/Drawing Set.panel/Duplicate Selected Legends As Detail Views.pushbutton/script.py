@@ -4,8 +4,23 @@ from pyrevit.framework import List
 from pyrevit import revit, DB, UI
 from pyrevit import script
 from pyrevit import forms
+import pyrevit
+import os
+import datetime
 
 __title__ = 'Duplicate Selected\nLegends As Detail Views'
+
+#buttom Tracker
+now = datetime.datetime.now()
+date = now.strftime("%Y-%m-%d")
+hostapp = pyrevit._HostApplication(__revit__)
+userName = hostapp.username
+buttonCode = 'Legends to Details'
+logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
+os.chdir(logFilePath)
+f = open(userName + ".txt", "a+")
+f.write(buttonCode + "\t" + date +"\n")
+f.close()
 
 
 class CopyUseDestination(DB.IDuplicateTypeNamesHandler):

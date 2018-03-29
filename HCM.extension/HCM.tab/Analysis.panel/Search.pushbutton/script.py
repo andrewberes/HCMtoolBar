@@ -1,6 +1,8 @@
 """The best interface ever!."""
 
 import os
+import pyrevit
+import datetime
 import os.path as op
 
 from pyrevit import HOST_APP
@@ -9,6 +11,18 @@ from pyrevit.loader import sessionmgr
 from pyrevit import forms
 from pyrevit import script
 import pyrevit.extensions as exts
+
+#buttom Tracker
+now = datetime.datetime.now()
+date = now.strftime("%Y-%m-%d")
+hostapp = pyrevit._HostApplication(__revit__)
+userName = hostapp.username
+buttonCode = 'search'
+logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
+os.chdir(logFilePath)
+f = open(userName + ".txt", "a+")
+f.write(buttonCode + "\t" + date +"\n")
+f.close()
 
 
 __context__ = 'zerodoc'

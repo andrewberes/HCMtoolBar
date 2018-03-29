@@ -1,4 +1,19 @@
 from pyrevit import revit, DB
+import pyrevit
+import os
+import datetime
+
+#buttom Tracker
+now = datetime.datetime.now()
+date = now.strftime("%Y-%m-%d")
+hostapp = pyrevit._HostApplication(__revit__)
+userName = hostapp.username
+buttonCode = 'find sheets missing revision number'
+logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
+os.chdir(logFilePath)
+f = open(userName + ".txt", "a+")
+f.write(buttonCode + "\t" + date +"\n")
+f.close()
 
 
 __doc__ = 'Sometimes when a revision cloud is placed inside a view '\

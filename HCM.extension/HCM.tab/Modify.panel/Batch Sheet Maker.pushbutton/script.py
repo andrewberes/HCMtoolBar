@@ -4,7 +4,21 @@ from pyrevit import coreutils
 from pyrevit import revit, DB
 from pyrevit import forms
 from pyrevit import script
+import os
+import pyrevit
+import datetime
 
+#buttom Tracker
+now = datetime.datetime.now()
+date = now.strftime("%Y-%m-%d")
+hostapp = pyrevit._HostApplication(__revit__)
+userName = hostapp.username
+buttonCode = 'Batch Sheet Maker'
+logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
+os.chdir(logFilePath)
+f = open(userName + ".txt", "a+")
+f.write(buttonCode + "\t" + date +"\n")
+f.close()
 
 __helpurl__ = "https://www.youtube.com/watch?v=SJzs9ZxqRYc"
 

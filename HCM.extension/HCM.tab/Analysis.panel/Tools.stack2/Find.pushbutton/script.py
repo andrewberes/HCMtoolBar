@@ -4,6 +4,21 @@ from collections import defaultdict, namedtuple
 from pyrevit import script
 from pyrevit import revit, DB
 
+import os
+import datetime
+import pyrevit
+
+#buttom Tracker
+now = datetime.datetime.now()
+date = now.strftime("%Y-%m-%d")
+hostapp = pyrevit._HostApplication(__revit__)
+userName = hostapp.username
+buttonCode = 'find'
+logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
+os.chdir(logFilePath)
+f = open(userName + ".txt", "a+")
+f.write(buttonCode + "\t" + date +"\n")
+f.close()
 
 __context__ = 'selection'
 
