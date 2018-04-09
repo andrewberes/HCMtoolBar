@@ -7,6 +7,8 @@ import os
 import pyrevit
 import datetime
 
+_title__ = 'Capture\nWindow'
+
 #buttom Tracker
 now = datetime.datetime.now()
 date = now.strftime("%Y-%m-%d")

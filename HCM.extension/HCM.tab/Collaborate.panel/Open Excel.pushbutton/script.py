@@ -8,6 +8,8 @@ import subprocess
 import datetime
 import pyrevit
 
+__title__ = 'Open\nExcel'
+
 #buttom Tracker
 now = datetime.datetime.now()
 date = now.strftime("%Y-%m-%d")
