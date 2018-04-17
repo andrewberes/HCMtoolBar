@@ -8,7 +8,7 @@ now = datetime.datetime.now()
 date = now.strftime("%Y-%m-%d")
 hostapp = pyrevit._HostApplication(__revit__)
 userName = hostapp.username
-buttonCode = average
+buttonCode = 'average'
 logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
 os.chdir(logFilePath)
 f = open(userName + ".txt", "a+")
