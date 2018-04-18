@@ -8,7 +8,7 @@ import os
 import datetime
 
 
-__title__ = 'Who did that??'
+__title__ = 'Who did\nthat??'
 __author__ = 'Ehsan Iran-Nejad\n'\
              'Frederic Beaupere'
 

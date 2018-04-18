@@ -7,7 +7,7 @@ import os
 import pyrevit
 import datetime
 
-_title__ = 'Capture\nWindow'
+__title__ = 'Capture\nWindow'
 
 #buttom Tracker
 now = datetime.datetime.now()

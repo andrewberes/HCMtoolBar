@@ -8,7 +8,7 @@ import pyrevit
 import os
 import datetime
 
-__title__ = 'Duplicate Selected\nLegends As Drafting Views'
+__title__ = 'Legends to\nDrafting Views'
 
 #buttom Tracker
 now = datetime.datetime.now()
