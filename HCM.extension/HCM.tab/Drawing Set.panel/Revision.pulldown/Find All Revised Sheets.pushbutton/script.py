@@ -12,7 +12,7 @@ date = now.strftime("%Y-%m-%d")
 hostapp = pyrevit._HostApplication(__revit__)
 userName = hostapp.username
 buttonCode = 'find all revised sheets'
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
+logFilePath = r'L:\04 SOFTWARE RESOURCES\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
 os.chdir(logFilePath)
 f = open(userName + ".txt", "a+")
 f.write(buttonCode + "\t" + date +"\n")

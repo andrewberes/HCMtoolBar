@@ -14,13 +14,13 @@ date = now.strftime("%Y-%m-%d")
 hostapp = pyrevit._HostApplication(__revit__)
 userName = hostapp.username
 buttonCode = 'Support'
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
+logFilePath = r'L:\04 SOFTWARE RESOURCES\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
 os.chdir(logFilePath)
 f = open(userName + ".txt", "a+")
 f.write(buttonCode + "\t" + date + "\n")
 f.close()
 
 import os
-os.startfile('L:\Dynamo\zzz.DoNotModify\supportTicketTemplate.oft - Shortcut')
+os.startfile(r'L:\04 SOFTWARE RESOURCES\Dynamo\zzz.DoNotModify\supportTicketTemplate.oft - Shortcut')
 
 

@@ -16,7 +16,7 @@ date = now.strftime("%Y-%m-%d")
 hostapp = pyrevit._HostApplication(__revit__)
 userName = hostapp.username
 buttonCode = 'open excel'
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
+logFilePath = r'L:\04 SOFTWARE RESOURCES\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
 os.chdir(logFilePath)
 f = open(userName + ".txt", "a+")
 f.write(buttonCode + "\t" + date +"\n")
@@ -50,8 +50,8 @@ for element_id in selected_ids:
     print('EXPORTED: {0}\n      TO: {1}\n'.format(element.ViewName, filename))
     EXCEL = r"C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE"
     if os.path.exists(EXCEL):
-        print('Excel Found. Trying to open...')
-        print('Filename is: ', filename)
+        #print('Excel Found. Trying to open...')
+        #print('Filename is: ', filename)
         try:
             full_filepath = os.path.join(desktop, filename)
             os.system('start excel \"{path}\"'.format(path=full_filepath))
