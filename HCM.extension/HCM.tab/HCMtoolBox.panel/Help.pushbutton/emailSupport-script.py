@@ -1,4 +1,4 @@
-"""Launch an email to the BIM support form.
+"""Launch an email to the BIM support form. This is a test of the GitKraken system.
 """
 
 import os
