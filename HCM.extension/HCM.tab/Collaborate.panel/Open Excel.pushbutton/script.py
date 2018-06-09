@@ -3,24 +3,11 @@ from Autodesk.Revit.DB import ExportColumnHeaders, ExportTextQualifier
 from Autodesk.Revit.DB import BuiltInCategory, ViewSchedule
 from Autodesk.Revit.UI import TaskDialog
 
-import os
-import subprocess
-import datetime
-import pyrevit
+
 
 __title__ = 'Open\nExcel'
 
-#buttom Tracker
-now = datetime.datetime.now()
-date = now.strftime("%Y-%m-%d")
-hostapp = pyrevit._HostApplication(__revit__)
-userName = hostapp.username
-buttonCode = 'open excel'
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
-os.chdir(logFilePath)
-f = open(userName + ".txt", "a+")
-f.write(buttonCode + "\t" + date +"\n")
-f.close()
+
 
 
 

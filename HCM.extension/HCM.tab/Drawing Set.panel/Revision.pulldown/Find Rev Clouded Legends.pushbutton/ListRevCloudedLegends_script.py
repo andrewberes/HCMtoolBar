@@ -2,9 +2,7 @@ from collections import defaultdict
 
 from pyrevit import revit, DB
 from pyrevit import script
-import datetime
-import os
-import pyrevit
+
 
 __title__ = 'Find Legends with Revision Clouds'
 __author__ = 'Frederic Beaupere'
@@ -15,17 +13,7 @@ __doc__ = 'Lists all legends with revision clouds on them. '\
           'Legends with revision clouds will not trigger the sheet '\
           'index of the sheet they are placed on and '\
           'that is why this tool is useful.'
-#buttom Tracker
-now = datetime.datetime.now()
-date = now.strftime("%Y-%m-%d")
-hostapp = pyrevit._HostApplication(__revit__)
-userName = hostapp.username
-buttonCode = __title__
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
-os.chdir(logFilePath)
-f = open(userName + ".txt", "a+")
-f.write(buttonCode + "\t" + date +"\n")
-f.close()
+
 
 output = script.get_output()
 

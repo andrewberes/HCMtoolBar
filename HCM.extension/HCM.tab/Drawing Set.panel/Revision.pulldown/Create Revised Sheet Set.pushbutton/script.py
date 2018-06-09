@@ -2,9 +2,7 @@ from pyrevit import framework
 from pyrevit import revit, DB
 from pyrevit import forms
 
-import pyrevit
-import os
-import datetime
+
 
 
 __doc__ = 'Select a revision from the list of revisions and this script '\
@@ -12,17 +10,7 @@ __doc__ = 'Select a revision from the list of revisions and this script '\
           'selected revision, and will assign the new sheet set as '\
           'the default print set.'
 
-#buttom Tracker
-now = datetime.datetime.now()
-date = now.strftime("%Y-%m-%d")
-hostapp = pyrevit._HostApplication(__revit__)
-userName = hostapp.username
-buttonCode = 'create revised sheet set'
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
-os.chdir(logFilePath)
-f = open(userName + ".txt", "a+")
-f.write(buttonCode + "\t" + date +"\n")
-f.close()
+
 
 
 

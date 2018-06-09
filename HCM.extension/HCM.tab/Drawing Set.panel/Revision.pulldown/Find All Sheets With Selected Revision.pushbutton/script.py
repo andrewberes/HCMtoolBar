@@ -1,20 +1,5 @@
 from pyrevit import revit, DB
 
-import os
-import datetime
-import pyrevit
-
-#buttom Tracker
-now = datetime.datetime.now()
-date = now.strftime("%Y-%m-%d")
-hostapp = pyrevit._HostApplication(__revit__)
-userName = hostapp.username
-buttonCode = 'find sheets with selected revision'
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
-os.chdir(logFilePath)
-f = open(userName + ".txt", "a+")
-f.write(buttonCode + "\t" + date +"\n")
-f.close()
 
 __doc__ = 'Select a revision cloud and this tool will list all '\
           'the sheets revised under the same revision.'

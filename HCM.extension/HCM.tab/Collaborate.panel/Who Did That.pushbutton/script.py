@@ -3,26 +3,14 @@
 from pyrevit import revit, DB, UI
 from pyrevit import forms
 from pyrevit import script
-import pyrevit
-import os
-import datetime
+
 
 
 __title__ = 'Who did\nthat??'
 __author__ = 'Ehsan Iran-Nejad\n'\
              'Frederic Beaupere'
 
-#buttom Tracker
-now = datetime.datetime.now()
-date = now.strftime("%Y-%m-%d")
-hostapp = pyrevit._HostApplication(__revit__)
-userName = hostapp.username
-buttonCode = __title__
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
-os.chdir(logFilePath)
-f = open(userName + ".txt", "a+")
-f.write(buttonCode + "\t" + date +"\n")
-f.close()
+
 
 
 def who_reloaded_keynotes():

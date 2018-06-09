@@ -2,21 +2,6 @@ from pyrevit.framework import List
 from pyrevit import revit, DB
 from pyrevit import forms
 
-import os
-import datetime
-import pyrevit
-
-#buttom Tracker
-now = datetime.datetime.now()
-date = now.strftime("%Y-%m-%d")
-hostapp = pyrevit._HostApplication(__revit__)
-userName = hostapp.username
-buttonCode = 'remove revision from sheets'
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
-os.chdir(logFilePath)
-f = open(userName + ".txt", "a+")
-f.write(buttonCode + "\t" + date +"\n")
-f.close()
 
 
 __doc__ = 'Select a revision from the list of revisions\n'\

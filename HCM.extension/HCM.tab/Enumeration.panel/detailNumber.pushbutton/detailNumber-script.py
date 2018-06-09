@@ -8,23 +8,10 @@ from pyrevit import script
 from pyrevit import forms
 
 import math
-import os
-import datetime
-import pyrevit
+
 
 __title__ = 'Detail Number\nBy Location'
 
-#buttom Tracker
-now = datetime.datetime.now()
-date = now.strftime("%Y-%m-%d")
-hostapp = pyrevit._HostApplication(__revit__)
-userName = hostapp.username
-buttonCode = 'Detail Number'
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
-os.chdir(logFilePath)
-f = open(userName + ".txt", "a+")
-f.write(buttonCode + "\t" + date +"\n")
-f.close()
 
 
 if __shiftclick__:

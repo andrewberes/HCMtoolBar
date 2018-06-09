@@ -3,9 +3,7 @@ import pyrevittoolslib.wipeactions
 
 from pyrevit import forms
 from pyrevit import script
-import pyrevit
-import os
-import datetime
+
 
 __title__ = 'Wipe for\nConsultant'
 
@@ -22,17 +20,7 @@ __doc__ = 'This tools helps you to remove extra unnecessary information in '\
 
 logger = script.get_logger()
 
-#buttom Tracker
-now = datetime.datetime.now()
-date = now.strftime("%Y-%m-%d")
-hostapp = pyrevit._HostApplication(__revit__)
-userName = hostapp.username
-buttonCode = 'Wipe for Consultant'
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
-os.chdir(logFilePath)
-f = open(userName + ".txt", "a+")
-f.write(buttonCode + "\t" + date +"\n")
-f.close()
+
 
 
 class WipeOption:

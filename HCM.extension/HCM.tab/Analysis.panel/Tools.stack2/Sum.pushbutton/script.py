@@ -15,21 +15,7 @@ __doc__ = 'Sums up the values of selected parameter on selected elements. ' \
 
 __title__ = 'Sum Total'
 
-import os
-import datetime
-import pyrevit
 
-#buttom Tracker
-now = datetime.datetime.now()
-date = now.strftime("%Y-%m-%d")
-hostapp = pyrevit._HostApplication(__revit__)
-userName = hostapp.username
-buttonCode = __title__
-logFilePath = 'L:\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
-os.chdir(logFilePath)
-f = open(userName + ".txt", "a+")
-f.write(buttonCode + "\t" + date +"\n")
-f.close()
 
 
 selection = revit.get_selection()
