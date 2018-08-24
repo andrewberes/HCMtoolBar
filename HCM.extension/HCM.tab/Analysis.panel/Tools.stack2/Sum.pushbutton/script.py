@@ -18,6 +18,7 @@ __title__ = 'Sum Total'
 import os
 import datetime
 import pyrevit
+import csv
 
 #buttom Tracker
 now = datetime.datetime.now()
@@ -29,7 +30,7 @@ logFilePath = r'L:\04 SOFTWARE RESOURCES\Dynamo\zzz.DoNotModify\pyHCMuserLogs'
 os.chdir(logFilePath)
 f = open(userName + ".txt", "a+")
 f.write(buttonCode + "\t" + date +"\n")
-f.close()
+f.close() 
 
 
 selection = revit.get_selection()
@@ -54,6 +55,7 @@ def is_calculable_param(param):
 
 def calc_param_total(element_list, param_name):
     sum_total = 0.0
+    totalsList = []
 
     def _add_total(total, param):
         if param.StorageType == DB.StorageType.Double:
@@ -63,6 +65,7 @@ def calc_param_total(element_list, param_name):
 
         return total
 
+    
     for el in element_list:
         param = el.LookupParameter(param_name)
         if not param:
@@ -74,10 +77,26 @@ def calc_param_total(element_list, param_name):
                                                                    param_name))
             else:
                 sum_total = _add_total(sum_total, type_param)
+                totalsList.append(type_param.AsDouble())
+                
         else:
             sum_total = _add_total(sum_total, param)
+            totalsList.append(param.AsDouble())
+
+    #print totalsList
+    now = datetime.datetime.now()
+    date = now.strftime("%Y-%m-%d %H-%M")
+
+    printFilePath = r'L:\04 SOFTWARE RESOURCES\Dynamo\AshishSumtotals'
+    os.chdir(printFilePath)
+    with open(str(date) + '.csv', 'wb') as myfile:
+		wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+		wr.writerow(totalsList)
+	
 
     return sum_total
+
+
 
 
 def format_length(total):
