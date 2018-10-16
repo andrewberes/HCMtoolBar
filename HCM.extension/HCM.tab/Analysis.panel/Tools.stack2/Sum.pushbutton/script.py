@@ -87,7 +87,7 @@ def calc_param_total(element_list, param_name):
     now = datetime.datetime.now()
     date = now.strftime("%Y-%m-%d %H-%M")
 
-    printFilePath = r'L:\04 SOFTWARE RESOURCES\Dynamo\AshishSumtotals'
+    printFilePath = r'L:\04 SOFTWARE RESOURCES\Revit Add-In'
     os.chdir(printFilePath)
     with open(str(date) + '.csv', 'wb') as myfile:
 		wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
