@@ -2,10 +2,12 @@
 Generates Detail Numbers for current Sheet"""
 
 import sys
-
+from pyrevit.framework import List
 from pyrevit import revit, DB, UI
 from pyrevit import script
 from pyrevit import forms
+from Autodesk.Revit.DB import ViewFamilyType, ViewDrafting, Element
+from Autodesk.Revit.DB import ViewFamily
 
 import math
 import os
@@ -70,18 +72,26 @@ builtInParam = DB.BuiltInParameter.VIEWPORT_DETAIL_NUMBER
 
 with revit.Transaction("Set Detail Number"):
 	for sheet in sheetlist:
+		counter = int(0)
 		for vportid in sheet.GetAllViewports():
 			vport = revit.doc.GetElement(vportid)
-			detailNumberParam = vport.get_Parameter(builtInParam)
-			detailNumber = detailNumberParam.AsString()
-			dumbDetailNumber = detailNumber + 'dup'
-			detailNumberParam.Set(dumbDetailNumber)
-			detailNumberParam = vport.get_Parameter(builtInParam)
-			titleMinimumPoint = vport.GetLabelOutline().MinimumPoint
-			titleMinX = titleMinimumPoint.X - leftMargin
-			locationX = math.floor((titleMinX) / divisorX)
-			titleMinY = titleMinimumPoint.Y - verticalMargin
-			locationY = (rows - math.floor((titleMinY) / divisorY))
-			newDetailNumber = str(int(locationY)) + columnLetters[int(locationX)]
-			detailNumberParam.Set(newDetailNumber)
-
+			
+			#This is where i need to filter out the type:Legends from my list of views on the sheet. This if statement is not working
+			if vport.Name != "No Title":
+				detailNumberParam = vport.get_Parameter(builtInParam)
+				detailNumber = detailNumberParam.AsString()
+				dumbDetailNumber = detailNumber + str(counter)
+				detailNumberParam.Set(dumbDetailNumber)
+				counter = counter + 1
+				
+		for vportid in sheet.GetAllViewports():
+			vport = revit.doc.GetElement(vportid)
+			if vport.Name != "No Title":
+				detailNumberParam = vport.get_Parameter(builtInParam)
+				titleMinimumPoint = vport.GetLabelOutline().MinimumPoint
+				titleMinX = titleMinimumPoint.X - leftMargin
+				locationX = math.floor((titleMinX) / divisorX)
+				titleMinY = titleMinimumPoint.Y - verticalMargin
+				locationY = (rows - math.floor((titleMinY) / divisorY))
+				newDetailNumber = str(int(locationY)) + columnLetters[int(locationX)]
+				detailNumberParam.Set(newDetailNumber)
