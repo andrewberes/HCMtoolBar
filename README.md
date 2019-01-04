@@ -1,4 +1,4 @@
-Welcome to the HCM custom tool library. 
+HCM custom tool library. 
 
 Developed while at HCM for the design technology group and firm wide deployment.
 
